@@ -5,12 +5,9 @@ import './App.css'
 function App() {
   return (
     <div className="container">
-      <nav className="sidebar">
-        <h2>Git Docs</h2>
+      <nav className="topbar">
+        <h2>GitGood</h2>
         <ul>
-          <li><a href="#intro">Introduction</a></li>
-          <li><a href="#setup">Setup</a></li>
-          <li><a href="#commands">Commands</a></li>
         </ul>
       </nav>
 
@@ -62,7 +59,7 @@ function App() {
 
                   <tr>
                     <td>Remote</td>
-                    <td>Copy of repository (repo) hosted online (e.g. GitLab, Github).</td>
+                    <td>Copy of repository (repo) hosted online (e.g. GitLab, GitHub).</td>
                   </tr>
 
                   <tr>
@@ -73,12 +70,12 @@ function App() {
               </table>
         </section>
 
-        <section id="bashCodesSteps">
+        <section className="bashCodesSteps">
           <h2>Creating a new repository</h2>
           <p>Repository is how Git starts tracking the project.</p>
 
-           <div className = "code-block">
-            <h3>A - Creating repository from scratch.</h3>
+          <div className = "code-block">
+            <h3>A - Start from scratch (git init).</h3>
             <pre>
               <p> 1. Go to your projects folder.</p>
               <code>cd my-project</code>
@@ -86,11 +83,66 @@ function App() {
               <p> 2. Tell git to start tracking it.</p>
               <code>git init</code>
 
-              <p>Git creates a hidden .git/folder here.</p>
-              <p>That folder is a repository. Never manually edit files inside .git/</p>
+              <div className='note'>
+                <p>Git creates a hidden .git/folder here.</p>
+                <p>That folder is a repository. Never manually edit files inside .git/</p>
+              </div>
             </pre>
-           </div>
+
+            <h3>B - Downloading an existing repository / cloning</h3>
+            <pre>
+              <p> Clone a repo from GitHub.</p> 
+              <code>git clone https://github.com/username/repository.git</code>
+
+              <p> Clone into a specific folder name.</p> 
+              <code>git clone https://github.com/username/repository.git my-folder</code>
+
+              <p> Clone only the latest snapshot (faster for large repos)</p> 
+              <code>git clone --depth 1 https://github.com/username/repository.git my-folder</code>
+            </pre>
+          </div>
         </section>
+        
+
+        <section className='theZones'>
+          <h2>Adding files & snapshots</h2>
+          <p> Git does not automatically save your changes. You tell them what to save and when.</p>
+        
+          <table>
+            <thead>
+              <h3>The three zones</h3>
+              <tr>
+                <th>Zone</th>
+                <th>What it is</th>
+                <th>Command</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Working directory</td>
+                <td>Your files as they are right now on disk.</td>
+                <td>-</td>
+              </tr>
+
+               <tr>
+                <td>Staging area</td>
+                <td>Changes when you selected for the next commit.</td>
+                <td>git add</td>
+              </tr>
+
+              <tr>
+                <td>Repository</td>
+                <td>Permanent snapshots saved in Git history.</td>
+                <td>git commit</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+            
+
+
+
 
       </main>
     </div>
