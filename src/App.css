@@ -22,22 +22,73 @@ html, body {
   min-height: 100vh;
 }
 
-.topbar {
-  background: #152331;
-  background: linear-gradient(to right, #000000, #152331);
-  
-  overflow:hidden;
-  padding: 20px;
-  display: flex;
-  flex-shrink: 0;
+.particles {
+  position: relative; /* Anchor for the absolute canvas */
   width: 100%;
-  margin: 0;           /* Remove any margin */
-  box-sizing: border-box;
+  height: 80px;       /* Fixed height for the navbar */
+  background: #0d1117;
+  overflow: hidden;   /* CRITICAL: Cuts off particles at the border */
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-#particles{
-  
+/* tsparticles canvas fills only the container */
+#tsparticles {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1; /* Particles in the back */
 }
+
+/*  that holds both particles and nav */
+.particles {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to right, #000000, #152331);
+  overflow: hidden;
+}
+
+/*  canvas fills the .particles container */
+.particles #tsparticles {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.topbar {
+  position: relative;
+  z-index: 10; /* Put this above the canvas so links work */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  color: white;
+  background: transparent;
+}
+
+.topbar {
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding: 1rem 2rem;
+  background: transparent;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1rem;
+}
+
+
 
 .content {
   padding: 40px;

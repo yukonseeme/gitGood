@@ -1,11 +1,14 @@
 //import { useState } from 'react'
 //import heroImg from './assets/hero.png'
 import './App.css'
+import ParticleBackground from './components/ParticleBackground';
 
 function App() {
   return (
     <div className="container">
+
       <div className="particles">
+       <ParticleBackground/>
         <nav className="topbar">
           <h2>GitGood</h2>
           <ul>
