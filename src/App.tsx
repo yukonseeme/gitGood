@@ -5,16 +5,18 @@ import './App.css'
 function App() {
   return (
     <div className="container">
-      <nav className="topbar">
-        <h2>GitGood</h2>
-        <ul>
-        </ul>
-      </nav>
+      <div className="particles">
+        <nav className="topbar">
+          <h2>GitGood</h2>
+          <ul>
+          </ul>
+        </nav>
+      </div>
 
       <main className="content">
         <section id="intro">
           <h2>What is Git?</h2>
-          <p>Git is a distributed version control system, a tool that tracks changes to files over time. Think of it like a detailed undo history for your entire project, one you cna share with other people.</p>
+          <p>Git is a distributed version control system, a tool that tracks changes to files over time. Think of it like a detailed undo history for your entire project, one you can share with other people.</p>
           </section>
 
           <section className="benefits">
@@ -138,11 +140,6 @@ function App() {
             </tbody>
           </table>
         </section>
-
-            
-
-
-
 
       </main>
     </div>
