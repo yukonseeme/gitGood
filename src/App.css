@@ -43,15 +43,6 @@ html, body {
   z-index: 1; /* Particles in the back */
 }
 
-/*  that holds both particles and nav */
-.particles {
-  position: relative;
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(to right, #000000, #152331);
-  overflow: hidden;
-}
-
 /*  canvas fills the .particles container */
 .particles #tsparticles {
   position: absolute !important;
@@ -64,7 +55,7 @@ html, body {
 
 .topbar {
   position: relative;
-  z-index: 10; /* Put this above the canvas so links work */
+  z-index: 10; 
   height: 100%;
   display: flex;
   align-items: center;
@@ -88,8 +79,6 @@ html, body {
   gap: 1rem;
 }
 
-
-
 .content {
   padding: 40px;
   overflow-y: auto;
@@ -107,6 +96,7 @@ table, th, td {
   border-collapse: collapse;
   padding: 10px;
   margin-top: 15px;
+  table-layout: auto;
 }
 
 .code-block{
@@ -144,3 +134,8 @@ code{
   overflow-y: auto;
 }
 
+.git-ignore-block {
+  white-space: pre-wrap; /* Forces the browser to respect line breaks */
+  display: block;  
+  height: auto;      /* Makes it behave like a block element */
+}
