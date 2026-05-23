@@ -23,7 +23,6 @@ export default function GitQuizBuilder() {
     const [loading, setLoading] = useState<boolean>(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     
-    // 🌟 CONNECTED FEEDBACK STATES:
     const [aiFeedback, setAiFeedback] = useState<string>('');
     const [loadingFeedback, setLoadingFeedback] = useState<boolean>(false);
     const [currentTopic, setCurrentTopic] = useState<string>('Git');
@@ -47,7 +46,7 @@ export default function GitQuizBuilder() {
         try {
             const response = await ai.models.generateContent({
                 model: 'gemini-2.5-flash',
-                contents: `Generate a 3-question multiple-choice quiz about "${topic}".`,
+                contents: `Generate a 7-question multiple-choice quiz about "${topic}".`,
                 config: {
                     responseMimeType: 'application/json',
                     responseSchema: {
@@ -130,7 +129,7 @@ export default function GitQuizBuilder() {
         const nextQuestionIndex = currentQuestionIndex + 1;
         setCurrentQuestionIndex(nextQuestionIndex);
 
-        // 🌟 AUTOMATICALLY TRIGGER EVALUATION PIPELINE WHEN QUIZ ENDS:
+        
         if (nextQuestionIndex === quizQuestions.length) {
             // If checking user state updates inside the same loop cycle, we evaluate against the fresh target score
             const finalScoreCalculated = selectedAnswer === quizQuestions[currentQuestionIndex].correctIndex ? score + 1 : score;
@@ -204,7 +203,7 @@ export default function GitQuizBuilder() {
                         </button>
                     ) : (
                         <div className="feedback-zone">
-                            {/* 🌟 FIXED THE SYNTAX DECLARATION ERROR BY EVALUATING INLINE */}
+            
                             <p className={`result-status ${selectedAnswer === quizQuestions[currentQuestionIndex].correctIndex ? 'correct' : 'incorrect'}`}>
                                 {selectedAnswer === quizQuestions[currentQuestionIndex].correctIndex ? '🎉 Correct!' : '❌ Incorrect'}
                             </p>
