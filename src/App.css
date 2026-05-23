@@ -6,7 +6,7 @@
   --accent-cyan: #19A7CE;
   --text: #c9d1d9;
   --text-heading: #ffffff;
-  font-size: 12px;
+  font-size: 14px; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
@@ -72,7 +72,7 @@ html, body {
 }
 
 .topbar h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem; /* Balanced against the new base root */
   font-weight: 700;
   letter-spacing: -0.5px;
   color: var(--text-heading);
@@ -88,7 +88,7 @@ html, body {
 .logo-icon {
   font-family: ui-monospace, monospace;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--accent-cyan);
   background: rgba(25, 167, 206, 0.1);
   padding: 4px 8px;
@@ -110,7 +110,7 @@ html, body {
   background: none;
   border: none;
   color: #8b949e;
-  font-size: 12px;
+  font-size: 13px; /* Scaled up from 12px */
   font-weight: 600;
   cursor: pointer;
   padding: 10px 16px;
@@ -160,7 +160,7 @@ html, body {
 }
 
 .content section h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem; /* Proportional balance update */
   font-weight: 600;
   color: var(--text-heading);
   margin-top: 0;
@@ -168,7 +168,7 @@ html, body {
 }
 
 .content section p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: var(--text);
 }
@@ -200,7 +200,7 @@ th {
 
 td {
   color: var(--text);
-  font-size: 11.5px;
+  font-size: 13px; /* Shifted from 11.5px for readable table documentation lists */
 }
 
 tr:hover {
@@ -209,7 +209,7 @@ tr:hover {
 
 .code-block {
   line-height: 160%;
-  font-size: 12px;
+  font-size: 13px; /* Clean tracking scale boost */
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: 6px;
@@ -223,7 +223,7 @@ tr:hover {
   margin-top: 0;
   margin-bottom: 12px;
   color: var(--accent-cyan);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .comment {
@@ -241,11 +241,11 @@ code {
   align-items: center;
   justify-content: flex-start;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-  font-size: 12px;
+  font-size: 13px; /* Unified code snippet sizes */
   margin-bottom: 15px;
   padding: 0 14px;
   width: 100%;
-  height: 36px;
+  height: 38px;
   border-radius: 6px;
   background-color: var(--bg-main);
   border: 1px solid var(--border-color);
@@ -270,7 +270,7 @@ code:last-child {
 
 .note p {
   margin: 0 0 6px 0 !important;
-  font-size: 11.5px !important;
+  font-size: 13px !important; /* Fixed cramped paragraph strings */
 }
 
 .note p:last-child {
@@ -287,7 +287,7 @@ code:last-child {
   height: auto;
   padding: 14px;
   color: #a5d6ff;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .quiz-container {
@@ -310,7 +310,7 @@ code:last-child {
   border: 1px solid var(--border-color);
   cursor: pointer;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--bg-element);
   color: var(--text-heading);
@@ -356,10 +356,11 @@ code:last-child {
 }
 
 .question-text {
-  font-size: 1.4rem;
+  font-size: 1.3rem; /* Scaled seamlessly via rem targets */
   font-weight: 600;
   margin-bottom: 20px;
   color: var(--text-heading);
+  line-height: 1.4;
 }
 
 .options-list {
@@ -375,7 +376,7 @@ code:last-child {
   border: 1px solid var(--border-color);
   background-color: var(--bg-main);
   color: var(--text);
-  font-size: 12px;
+  font-size: 13px; /* Clean clickable choice elements */
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -411,7 +412,7 @@ code:last-child {
 }
 
 .result-status {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: bold;
   margin: 0 0 10px 0;
 }
@@ -420,7 +421,7 @@ code:last-child {
 .result-status.incorrect { color: #f85149; }
 
 .explanation-text {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg-main);
@@ -444,7 +445,7 @@ code:last-child {
 }
 
 .score-card h4 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin: 0 0 6px 0;
   color: var(--text-heading);
 }
@@ -459,7 +460,7 @@ code:last-child {
 
 .mentor-header {
   margin: 0 0 10px 0;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: var(--accent-cyan);
   font-weight: 600;
 }
@@ -468,6 +469,6 @@ code:last-child {
   margin: 0;
   line-height: 1.6;
   white-space: pre-line;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text);
 }
