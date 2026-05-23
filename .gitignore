@@ -11,6 +11,8 @@ env
 
 node_modules
 dist
+dist/
+assets/
 dist-ssr
 *.local
 
