@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { GoogleGenAI, Type } from '@google/genai';
 
 // type definitions
